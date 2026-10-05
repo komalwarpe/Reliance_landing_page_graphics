@@ -1,0 +1,1395 @@
+:root {
+  /* ==============================
+     RELIANCE BRAND COLORS
+     ============================== */
+  --primary-blue: #0057A8;
+  --dark-blue: #062B5C;
+  --brand-red: #E31E24;
+  --light-blue: #EAF4FF;
+
+  --white: #FFFFFF;
+  --text-dark: #111827;
+  --text-grey: #5B6472;
+
+  /* Compatibility variables */
+  --navy: #062B5C;
+  --navy-dark: #041D3D;
+  --yellow: #E31E24;
+
+  --shadow: 0 12px 35px rgba(6, 43, 92, 0.15);
+  --text: #111827;
+}
+
+
+/* ==============================
+   GLOBAL
+   ============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+  line-height: 1.6;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+}
+
+
+/* ==============================
+   LOGO
+   ============================== */
+
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo img {
+  width: 74px;
+  height: auto;
+}
+
+.logo-main {
+  font-family: Poppins, sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: var(--primary-blue);
+}
+
+.logo-sub {
+  font-size: 6px;
+  color: var(--dark-blue);
+  letter-spacing: 0.2px;
+  margin-top: 2px;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 14px rgba(6, 43, 92, 0.10);
+}
+
+.nav-wrap {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.nav-links a {
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--brand-red);
+}
+
+.chevron {
+  font-size: 18px;
+}
+
+.student-login,
+.btn {
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 27px;
+  height: 3px;
+  background: var(--dark-blue);
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+
+/* ==============================
+   CALL STRIP
+   ============================== */
+
+.call-strip {
+  background: var(--primary-blue);
+  color: #fff;
+  text-align: center;
+  padding: 9px 15px;
+  font-weight: 700;
+}
+
+.call-strip strong {
+  color: #fff;
+}
+
+
+/* ==============================
+   HERO
+   ============================== */
+
+.hero {
+  background: var(--dark-blue);
+  color: #fff;
+  padding: 48px 0 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.78fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+.hero h1 {
+  font-family: Poppins, sans-serif;
+  font-size: clamp(20px, 4vw, 40px);
+  line-height: 1.15;
+  margin: 0 0 18px;
+}
+
+.hero h1 span {
+  color: var(--brand-red);
+}
+
+.lead {
+  font-size: 16px;
+  margin: 0 0 15px;
+}
+
+.lead strong,
+.branches strong,
+.rating strong {
+  color: #fff;
+}
+
+.branches {
+  margin: 10px 0 16px;
+}
+
+.hero-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.hero-points li {
+  margin: 7px 0;
+}
+
+.hero-points li::before {
+  content: "✓";
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+  background: var(--brand-red);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.rating {
+  margin: 13px 0 25px;
+}
+
+.rating span {
+  color: var(--brand-red);
+  letter-spacing: 2px;
+  font-size: 19px;
+  margin-left: 8px;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+      margin-top: 20px;
+}
+
+.btn-yellow {
+  background: var(--brand-red);
+  color: #fff;
+   margin-top: 20px;
+}
+
+.btn-yellow:hover {
+  background: #c9151b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(227, 30, 36, 0.25);
+}
+
+.full {
+  width: 100%;
+}
+
+
+/* ==============================
+   BOOKING CARD
+   ============================== */
+
+.booking-card {
+  background: #fff;
+  color: var(--dark-blue);
+  border-radius: 22px;
+  padding: 35px 36px 38px;
+  box-shadow: var(--shadow);
+}
+
+.booking-card h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 36px;
+  line-height: 1.15;
+  text-align: center;
+  margin: 0 0 2px;
+  color: var(--dark-blue);
+}
+
+.booking-card > p {
+  text-align: center;
+  margin: 0 0 22px;
+  color: var(--text-grey);
+}
+
+.lead-form,
+.syllabus-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.lead-form label,
+.syllabus-form label {
+  margin: 8px 0 4px;
+}
+
+label b {
+  color: var(--brand-red);
+}
+
+.lead-form input,
+.syllabus-form input {
+  height: 54px;
+  border: 2px solid var(--dark-blue);
+  border-radius: 12px;
+  padding: 0 14px;
+  outline: none;
+  background: #fff;
+  color: var(--text-dark);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lead-form input:focus,
+.syllabus-form input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 87, 168, 0.15);
+}
+
+
+/* ==============================
+   STATS
+   ============================== */
+
+.stats {
+  transform: translateY(38px);
+  background: var(--primary-blue);
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 25px 30px;
+  gap: 12px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  border-radius: 4px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats strong {
+  font-size: 31px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.stats span {
+  font-size: 14px;
+  color: #fff;
+}
+
+
+/* ==============================
+   GENERAL SECTIONS
+   ============================== */
+
+.section {
+  padding: 90px 0;
+}
+
+.light {
+  background: var(--light-blue);
+  padding-top: 125px;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-head h2 {
+  font-family: Poppins, sans-serif;
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.15;
+  margin: 0 0 7px;
+  color: var(--dark-blue);
+}
+
+.section-head p {
+  margin: 5px auto;
+  max-width: 950px;
+  color: var(--text-grey);
+}
+
+.section-head.wide p {
+  max-width: 1100px;
+}
+
+
+/* ==============================
+   HIGHLIGHT BOX
+   ============================== */
+
+.highlight-box {
+  background: var(--primary-blue);
+  border-radius: 32px;
+  padding: 35px 20px 38px;
+  color: #fff;
+}
+
+.highlight-box .section-head {
+  margin-bottom: 30px;
+}
+
+.highlight-box .section-head h2,
+.highlight-box .section-head p {
+  color: #fff;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.highlight-grid div {
+  background: var(--dark-blue);
+  color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* ==============================
+   COURSE SECTION
+   ============================== */
+
+.compare {
+  background: #fff;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px;
+  margin-top: 45px;
+}
+
+.course-card {
+  background: var(--dark-blue);
+  color: #fff;
+  border-radius: 22px;
+  padding: 24px 28px 32px;
+  min-height: 515px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+}
+
+.duration {
+  background: var(--brand-red);
+  color: #fff;
+  padding: 6px 17px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 800;
+  align-self: flex-start;
+}
+
+.course-card h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 25px;
+  line-height: 1.25;
+  margin: 44px 0 15px;
+  color: #fff;
+}
+
+.course-card h4 {
+  margin: 24px 0 14px;
+  color: #fff;
+}
+
+.tool-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 13px;
+}
+
+.tool-list span {
+  font-size: 14px;
+}
+
+.tool-list span::first-letter {
+  color: var(--brand-red);
+}
+
+.syllabus-inline {
+  margin-top: auto;
+  align-self: center;
+  min-width: 315px;
+}
+
+
+/* ==============================
+   TOOLS SECTION
+   ============================== */
+
+.tools-section {
+  background: var(--light-blue);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 24px;
+  align-items: start;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.tools-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.tool-logo {
+  width: 105px;
+  height: 105px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Poppins, sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  background: #202020;
+  color: #fff;
+}
+
+.ai {
+  background: #410000;
+  color: #ff9c00;
+}
+
+.ps {
+  background: #062941;
+  color: #35a9ff;
+}
+
+.lr {
+  background: #062941;
+  color: #43aaff;
+}
+
+.id {
+  background: #560021;
+  color: #f83d7c;
+}
+
+.corel {
+  background: #61b600;
+  border-radius: 50%;
+}
+
+.ae {
+  background: #09035c;
+  color: #a69cff;
+}
+
+.figma {
+  background: #303039;
+}
+
+.pr {
+  background: #09065c;
+  color: #a7a2ff;
+}
+
+.filmora {
+  background: #224458;
+  color: #b8ffff;
+  border-radius: 50%;
+}
+
+
+/* ==============================
+   SCOPE SECTION
+   ============================== */
+
+.scope {
+  background: #fff;
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.three-col article {
+  position: relative;
+  padding-left: 80px;
+}
+
+.big-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 54px;
+  color: var(--brand-red);
+  line-height: 1;
+}
+
+.three-col h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  margin: 0 0 22px;
+  color: var(--dark-blue);
+}
+
+.three-col p {
+  margin: 0;
+  color: var(--text-grey);
+}
+
+
+/* ==============================
+   CAREERS
+   ============================== */
+
+.careers {
+  background: var(--light-blue);
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.career-grid article {
+  background: var(--dark-blue);
+  color: #fff;
+  padding: 28px 25px;
+  text-align: center;
+  border-right: 3px solid #fff;
+}
+
+.person-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  border: 3px solid var(--brand-red);
+  border-radius: 50%;
+  color: var(--brand-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 54px;
+  line-height: 0.5;
+}
+
+.career-grid h3 {
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.career-grid p {
+  font-size: 15px;
+  color: #dce8f5;
+}
+
+
+/* ==============================
+   SALARY
+   ============================== */
+
+.salary {
+  background: #fff;
+}
+
+.salary-points {
+  max-width: 1150px;
+  margin: 25px auto;
+  padding-left: 28px;
+}
+
+.salary-points li {
+  margin: 6px 0;
+}
+
+.salary-band {
+  margin-top: 55px;
+  background: var(--primary-blue);
+  color: #fff;
+  padding: 70px 45px;
+  display: grid;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+  gap: 14px;
+}
+
+.salary-band h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 36px;
+  line-height: 1.4;
+  margin: auto 0;
+  color: #fff;
+}
+
+.salary-card {
+  min-height: 160px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.salary-card strong {
+  font-size: 38px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.salary-card span {
+  color: #fff;
+}
+
+.salary-band .salary-card:nth-child(n+5) {
+  grid-row: 2;
+}
+
+
+/* ==============================
+   FAQ
+   ============================== */
+
+.faq-section {
+  background: #fff;
+}
+
+.faq-title {
+  text-align: center;
+  margin: 10px 0 25px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.faq-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+details {
+  background: var(--light-blue);
+  border-bottom: 3px solid #fff;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 17px 18px;
+  font-weight: 800;
+  color: var(--dark-blue);
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "›";
+  display: inline-block;
+  margin-right: 9px;
+  transform: rotate(0);
+  color: var(--brand-red);
+  font-size: 20px;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details p {
+  margin: 0;
+  padding: 0 18px 18px 40px;
+  color: var(--text-grey);
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.footer {
+  background: var(--navy-dark);
+  color: #fff;
+  padding-top: 65px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.3fr 1fr;
+  gap: 45px;
+  padding-bottom: 45px;
+}
+
+.footer .logo-main,
+.footer .logo-sub {
+  color: #fff;
+}
+
+.footer-logo {
+  margin-bottom: 18px;
+}
+
+.footer-text {
+  color: #cbd3e6;
+  max-width: 340px;
+}
+
+.footer h3 {
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  margin-top: 0;
+}
+
+.footer h3::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 3px;
+  background: var(--brand-red);
+  margin-top: 7px;
+}
+
+.footer-grid > div:not(:first-child) a {
+  display: block;
+  margin: 7px 0;
+  color: #e6eaf3;
+  transition: color 0.2s ease;
+}
+
+.footer-grid > div:not(:first-child) a:hover {
+  color: var(--brand-red);
+}
+
+.footer-grid p {
+  color: #d2d9e8;
+}
+
+
+/* ==============================
+   SOCIAL ICONS
+   ============================== */
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #65708a;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff !important;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.socials a:hover {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  transform: translateY(-3px);
+}
+
+
+/* ==============================
+   COPYRIGHT
+   ============================== */
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  padding: 18px;
+  color: #b9c2d4;
+  font-size: 14px;
+}
+
+
+/* ==============================
+   FLOATING CALL BUTTON
+   ============================== */
+
+.floating-call {
+  position: fixed;
+  left: 14px;
+  bottom: 18px;
+  width: 65px;
+  height: 65px;
+  z-index: 60;
+  border-radius: 50%;
+  background: var(--brand-red);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+}
+
+.floating-call:hover {
+  background: var(--primary-blue);
+  transform: scale(1.06);
+}
+
+
+/* ==============================
+   MODAL
+   ============================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.modal-box {
+  position: relative;
+  z-index: 1;
+  width: min(690px, 100%);
+  max-height: 94vh;
+  overflow: auto;
+  background: var(--dark-blue);
+  color: #fff;
+  border: 2px solid var(--brand-red);
+  padding: 18px 12px 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: 0;
+  color: var(--brand-red);
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.modal-course {
+  text-align: center;
+  font-size: 22px;
+  margin: 0;
+  color: #fff;
+}
+
+.modal-box h2 {
+  text-align: center;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 8px 0 15px;
+  color: #fff;
+}
+
+.modal-line {
+  width: 120px;
+  height: 2px;
+  background: var(--brand-red);
+  margin: auto;
+}
+
+.modal-box h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 8px 0;
+  color: #fff;
+}
+
+.syllabus-form {
+  padding: 0;
+}
+
+.syllabus-form label {
+  font-size: 16px;
+  color: #fff;
+}
+
+.syllabus-form input {
+  height: 47px;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+}
+
+.syllabus-form input:focus {
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 3px rgba(227, 30, 36, 0.15);
+}
+
+.syllabus-form .btn {
+  border-radius: 5px;
+  margin-top: 12px;
+}
+
+.modal-close-text {
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close-text:hover {
+  color: var(--brand-red);
+}
+
+
+/* ==============================
+   SUCCESS PAGE
+   ============================== */
+
+.success-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--dark-blue);
+  padding: 20px;
+}
+
+.success-card {
+  background: #fff;
+  padding: 50px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.success-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: var(--brand-red);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 45px;
+  margin: auto;
+}
+
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 1100px) {
+
+  .nav-links {
+    gap: 17px;
+    font-size: 13px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-card {
+    max-width: 650px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .career-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .three-col {
+    gap: 35px;
+  }
+}
+
+
+/* ==============================
+   MOBILE NAVIGATION
+   ============================== */
+
+@media (max-width: 800px) {
+
+  .container {
+    width: min(100% - 28px, 620px);
+  }
+
+  .nav-wrap {
+    min-height: 70px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    padding: 10px 20px 20px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 13px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .student-login {
+    margin-top: 12px;
+    border-radius: 10px;
+  }
+
+  .hero {
+    padding-top: 35px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .stats {
+    transform: none;
+    margin-top: 35px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 12px;
+  }
+
+  .light {
+    padding-top: 70px;
+  }
+
+  .highlight-grid,
+  .course-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    min-height: 0;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-grid article {
+    border-right: 0;
+    border-bottom: 3px solid #fff;
+  }
+
+  .salary-band {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 35px 18px;
+  }
+
+  .salary-band h3 {
+    grid-column: 1 / -1;
+  }
+
+  .salary-band .salary-card:nth-child(n+5) {
+    grid-row: auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* ==============================
+   SMALL MOBILE
+   ============================== */
+
+@media (max-width: 520px) {
+
+  .container {
+    width: calc(100% - 22px);
+  }
+
+  .logo-main {
+    font-size: 32px;
+  }
+
+  .logo-sub {
+    font-size: 5px;
+  }
+
+  .logo img {
+    width: 62px;
+  }
+
+  .call-strip {
+    font-size: 13px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .booking-card {
+    padding: 26px 18px;
+  }
+
+  .booking-card h2 {
+    font-size: 29px;
+  }
+
+  .stats strong {
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .highlight-box {
+    padding: 28px 12px;
+    border-radius: 24px;
+  }
+
+  .highlight-grid {
+    gap: 8px;
+  }
+
+  .highlight-grid div {
+    font-size: 14px;
+  }
+
+  .course-card {
+    padding: 20px 18px 28px;
+  }
+
+  .course-card h3 {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+
+  .tool-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .syllabus-inline {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 10px;
+  }
+
+  .tool-logo {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .three-col article {
+    padding-left: 65px;
+  }
+
+  .three-col h3 {
+    font-size: 25px;
+  }
+
+  .salary-band {
+    grid-template-columns: 1fr;
+  }
+
+  .salary-band h3 {
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .modal-box {
+    padding: 18px 12px 5px;
+  }
+
+  .modal-box h2 {
+    font-size: 35px;
+  }
+
+  .modal-box h3 {
+    font-size: 24px;
+  }
+
+  .floating-call {
+    width: 56px;
+    height: 56px;
+    font-size: 28px;
+  }
+} 
